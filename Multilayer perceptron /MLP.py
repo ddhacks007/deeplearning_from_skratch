@@ -62,6 +62,6 @@ def learn(learning_rate, recommended_activation):
     hidden_layer_2 = activation(recommended_activation, multiply(hidden_layer_1, synopses_2) )
     output_layer = activation(recommended_activation, multiply(hidden_layer_2, synopses_3))
     print(output_layer)
-    return list((synopses_1, synopses_2))
+    return [synopses_1, synopses_2, synopses_3]
 
-a = learn(0.01, 'relu')
+weights = learn(0.01, 'relu')
